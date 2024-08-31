@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="698.0" style="-fx-background-color: #f8f9fa;" stylesheets="@style/style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dm.sdia.dossiermedicale.presentation.controllers.MainController">
+   <children>
+      <Pane layoutX="-7.0" prefHeight="461.0" prefWidth="179.0" style="-fx-background-color: #008F8C;">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="57.0" layoutY="28.0">
+               <image>
+                  <Image url="@dossier.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="ButtonPatient" alignment="CENTER" layoutX="-18.0" layoutY="166.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="150.0" styleClass="btn-primary" text="Patient" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" style="-fx-alignment: center;">
+                     <image>
+                        <Image url="@patient.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button fx:id="ButtonCons" alignment="CENTER" layoutX="-4.0" layoutY="218.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="162.0" styleClass="btn-primary" text="Consultation" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0">
+                     <image>
+                        <Image url="@medecin.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="163.0" prefHeight="461.0" prefWidth="533.0">
+         <children>
+            <Text fx:id="LabelNom" layoutX="157.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue Dr.Ahmed">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="TableVIewPatient" layoutX="10.0" layoutY="228.0" onMouseClicked="#setIdPatient" prefHeight="233.0" prefWidth="523.0">
+              <columns>
+                <TableColumn fx:id="TableColumnNom" prefWidth="120.0" text="Nom" />
+                <TableColumn fx:id="TableColumnPrenom" prefWidth="109.0" text="Prénom" />
+                  <TableColumn fx:id="TableColumnCin" prefWidth="102.0" text="Cin" />
+                  <TableColumn fx:id="TableColumnDateN" prefWidth="158.0" text="Date Naissance" />
+              </columns>
+            </TableView>
+            <HBox layoutX="42.0" layoutY="162.0" prefHeight="40.0" prefWidth="484.0" spacing="20.0">
+               <children>
+                  <Button fx:id="ButtonDossier" mnemonicParsing="false" prefHeight="28.0" prefWidth="225.0" styleClass="btn-primary" text="Consulter Un Dossier Medicale">
+                     <font>
+                        <Font name="Arial Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@yeux-rouges.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <TextField fx:id="TextFieldSearch" prefHeight="25.0" prefWidth="227.0" promptText="Chercher Par Nom,Cin..." styleClass="text-field" />
+               </children>
+               <padding>
+                  <Insets top="5.0" />
+               </padding>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
